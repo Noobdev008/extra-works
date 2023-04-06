@@ -1,0 +1,4 @@
+Publishable key - pk_test_51LiHuQSHhFc0OYu64TowBCAKBmLd0FzNbbTHf0ftXCbOIMWQ5htxbkXayeUH9HOvT6LP2FP4U5fDP2tG1w4wayGA00NbGdB2bz
+
+
+Secret key - sk_test_51LiHuQSHhFc0OYu6a5JU1t8cf6nDajh6G5eN4IIh9sPjX4x68OMYS9lN56hQm7kxt3k3gXv3tn6B24pxdi0779pH00PQZBFvta
