@@ -1,0 +1,155 @@
+<p>BootStrap</p>
+
+<p>
+  <ngb-alert [dismissible]="false">
+    <strong>Warning!</strong> Better check yourself, you're not looking too
+    good.
+  </ngb-alert>
+</p>
+
+<p>Material UI</p>
+
+<section>
+  <div class="example-label">Flat</div>
+  <div class="example-button-row">
+    <button mat-flat-button>Basic</button>
+    <button mat-flat-button color="primary">Primary</button>
+    <button mat-flat-button color="accent">Accent</button>
+    <button mat-flat-button color="warn">Warn</button>
+    <button mat-flat-button disabled>Disabled</button>
+    <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+</section>
+
+<br /><br /><br /><br /><br /><br />
+<h1>Todo List</h1>
+
+<input type="text" placeholder="Enter New Task" #task />
+<br />
+<button (click)="addTask(task.value)">Add Task</button>
+
+<ul *ngFor="let item of list">
+  <li>{{ item.name }} <button (click)="remove(item.id)">Remove</button></li>
+</ul>
+
+<br /><br /><br /><br /><br />
+
+<h1>Send Data Parent to Child Component</h1>
+
+<!-- <app-child [item]="data"></app-child> -->
+
+<button (click)="updateChild()">Update child component</button>
+
+<br /><br /><br /><br /><br />
+
+<h1>Reuseable Components</h1>
+<ul *ngFor="let user of userDetails">
+  <app-reusealble [item]="user"></app-reusealble>
+</ul>
+<br /><br /><br /><br /><br />
+<h1>Send Data Child to Parent Component</h1>
+<h2>{{ shubham }}</h2>
+
+<app-child2 (updateDataEvent)="updateData($event)"></app-child2>
+
+<br /><br /><br /><br /><br />
+
+<h1>Two Way Binding</h1>
+
+<h1>{{ title1 }}</h1>
+<input type="text" [(ngModel)]="name" />
+
+<p>{{ name }}</p>
+
+<br /><br /><br /><br /><br />
+
+<h1>Template Reference Variable</h1>
+
+<input type="text" #userbox name="user" placeholder="name likho koi bhi" />
+<button (click)="getval(userbox.value)">Call Function</button>
+
+<br /><br /><br /><br /><br />
+<h1>Angular basic pipes example</h1>
+
+<h1>{{ basicpipes }}</h1>
+<h1>{{ basicpipes | lowercase }}</h1>
+<h1>{{ basicpipes | uppercase }}</h1>
+
+<h1>{{ today | date }}</h1>
+<h1>{{ today | date: "fullDate" }}</h1>
+
+<br /><br /><br /><br /><br />
+<h1>Angular advance pipes example</h1>
+<h1>{{ basicpipes }}</h1>
+<h1>Slice using</h1>
+<h1>{{ basicpipes | slice: 3 }}</h1>
+<h1>{{ basicpipes | slice: 3:6 }}</h1>
+<h1>using 2 pipes at a time</h1>
+<h1>{{ basicpipes | slice: 3:6 | uppercase }}</h1>
+
+<h1>{{ user | json }}</h1>
+<h1>0002000.30000</h1>
+<h1>{{ 2000.3 | number: "2.2-3" }}</h1>
+<h1>{{ 2.3 | number: "3.3-5" }}</h1>
+<h1>{{ 20 | currency: "USD" }}</h1>
+<h1>{{ 20 | currency: "INR" }}</h1>
+
+<br /><br /><br /><br /><br />
+
+<h1>Customs</h1>
+<h1>{{ 20 | usdInr: 72 }}</h1>
+
+<br /><br /><br /><br /><br />
+
+<h1>Template driven form</h1>
+<form #loginForm="ngForm" (ngSubmit)="userlogin(loginForm.value)">
+  <input type="text" placeholder="enter name" name="name" ngModel />
+  <br /><br />
+  <input type="password" placeholder="enter password" name="password" ngModel />
+  <br />
+  <br />
+  <button>Login</button>
+</form>
+
+<h1>{{ text.name }}</h1>
+<h1>{{ text.password }}</h1>
+
+<br /><br /><br /><br /><br />
+
+<h1>Reactive form in angular</h1>
+
+<form [formGroup]="form" (ngSubmit)="loginuser()">
+  <input
+    type="text"
+    placeholder="Enter name"
+    name="user"
+    formControlName="user"
+  />
+  <br />
+  <span style="color: red" *ngIf="userx && userx.invalid && userx.touched"
+    >This filed is not valid</span
+  >
+  <br />
+  <input type="password" name="password" formControlName="password" />
+  <br />
+  <span
+    style="color: red"
+    *ngIf="passwordx && passwordx.invalid && passwordx.touched"
+    >This filed is not valid</span
+  >
+  <br />
+  <button [disabled]="form.invalid">Submit</button>
+</form>
+
+<h1>{{ text1.user }}</h1>
+<h1>{{ text1.password }}</h1>
+
+<br /><br /><br /><br />
+
+<h1>Directives in angular</h1>
+
+<h1>Without Directive using</h1>
+
+<h1 appRedEl>With Directive using</h1>
+
+<br /><br /><br /><br />
