@@ -1,0 +1,58 @@
+<h1>Routing/Static Routing</h1>
+<a routerLink="">Home</a>
+<br />
+<!-- <a routerLink="user/:id">User</a>/ -->
+<br />
+<a routerLink="about">About</a>
+
+<br /><br /><br /><br /><br />
+
+<h1>Dynamic Routing</h1>
+<a routerLink="user/1">User1</a>
+<br />
+<a routerLink="user/2">User2</a>
+<br />
+<a routerLink="user/3">User3</a>
+<router-outlet></router-outlet>
+
+<br /><br /><br /><br />
+<h1>Service in angular</h1>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.name }} <br />
+    {{ user.age }} <br />
+    {{ user.email }}
+  </li>
+</ul>
+
+<!-- <app-footer></app-footer> -->
+
+<br /><br /><br /><br />
+<h1>API Calling Get Method</h1>
+
+<ul>
+  <li *ngFor="let user of user">
+    login: {{ user.login }}
+    <br />
+
+    id: {{ user.id }}
+    <br />
+    node_id: {{ user.node_id }}
+    <hr />
+  </li>
+</ul>
+<app-footer></app-footer>
+
+<br /><br /><br /><br />
+<h1>API Calling Post Method</h1>
+
+<form #usersForm (ngSubmit)="getUserFormData(usersForm.value)">
+  <input type="text" name="name" placeholder="name" ngModel />
+  <br />
+  <br />
+  <input type="text" name="id" placeholder="node_id " ngModel />
+  <br />
+  <br />
+  <button>Add New User</button>
+</form>
