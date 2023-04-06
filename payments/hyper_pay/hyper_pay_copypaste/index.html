@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://eu-test.oppwa.com/v1/paymentWidgets.js?checkoutId=086256175331F43D38BC40A346359D95.uat01-vm-tx02"></script>
+    <style>
+      body {
+        background-color: #f6f6f5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <form action="/" class="paymentWidgets" data-brands="VISA MASTER AMEX"></form> -->
+    <form
+      action="https://eu-test.oppwa.com/v1/checkouts/086256175331F43D38BC40A346359D95.uat01-vm-tx02/payment"
+      class="paymentWidgets"
+      data-brands="VISA MASTER AMEX"
+    ></form>
+  </body>
+  <script>
+    var wpwlOptions = { style: "card" };
+  </script>
+</html>
