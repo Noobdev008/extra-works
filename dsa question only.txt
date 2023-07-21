@@ -1,0 +1,9 @@
+1- Palindrome
+2- Anagram
+3- Sorting
+4- Blance paranthsys
+5- Remove 0 or 1
+6- Fibonacci
+7- Armstrong number 
+8- Kth element
+9- 
